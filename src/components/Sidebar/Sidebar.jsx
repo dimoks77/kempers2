@@ -1,19 +1,22 @@
+import React from "react";
 import css from "./Sidebar.module.css";
-import Iconsvg from '../Icons/Icons';
+import Iconsvg from "../Icons/Icons"; // Убедитесь, что путь правильный
 
 const Sidebar = () => {
   return (
     <form className={css.searchForm}>
       <div className={css.locationGroup}>
         <p className={css.label}>Location:</p>
-        <Iconsvg className={css.icons} iconName="icon-minus-round" />
-        <input
-          className={css.searchInput}
-          type="text"
-          id="location"
-          name="location"
-          placeholder="Kyiv, Ukraine"
-        />
+        <div className={css.inputWrapper}>
+         <input
+            className={css.searchInput}
+            type="text"
+            id="location"
+            name="location"
+            placeholder="City"
+          />
+          <Iconsvg className={css.icons} iconName="location" />
+       </div>
       </div>
 
       <div className={css.filters}>
