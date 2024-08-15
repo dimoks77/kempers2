@@ -1,0 +1,89 @@
+.container {
+    display: flex;
+    flex-direction: row;
+    gap: 64px; 
+    padding: 100px 64px;
+}
+
+.search-form {
+    display: flex;
+    flex-direction: column;
+    gap: 32px; 
+    width: 360px;
+    max-width: 360px;
+}
+
+
+.location {
+    display: flex;
+    flex-direction: column;
+    width: 360px;
+    height: 88px;
+}
+
+.location-group {
+    display: flex;
+    gap: 8px;
+}
+
+.filters  {
+    display: flex;
+    flex-direction: column;
+    width: 360px;
+    height: 270px;
+}
+
+.type  {
+    display: flex;
+    flex-direction: column;
+    width: 360px;
+    height: 167px;
+}
+
+.label{
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 150%;
+    color: rgba(16, 24, 40, 0.6);
+}
+
+
+.searchInput {
+    border-radius: 10px;
+    padding: 18px 218px 18px 18px;
+    width: 360px;
+    height: 56px;
+    color: #101828;
+    background: #f7f7f7;
+    position: relative;
+}
+
+.searchInput::placeholder {
+    color: #101828;
+  }
+
+.searchButton {
+    border-radius: 200px;
+    padding: 16px 60px;
+    width: 173px;
+    height: 56px;
+    cursor: pointer;
+}
+
+.searchButton:hover {
+    background-color: #0056b3;
+}
+
+.inputWrapper::before {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 0.5rem;
+    top: 50%;
+    transform: translateY(-50%); 
+    width: 1.5rem;
+    height: 1.5rem;
+    background: url('../../icons/location.svg') no-repeat center center;
+    background-size: contain; 
+  }

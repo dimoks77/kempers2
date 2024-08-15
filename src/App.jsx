@@ -41,7 +41,7 @@ export const App = () => {
 
   return (
     <>
-      <h1>test</h1>
+      {/* <h1>test</h1> */}
       <Sidebar />
       {/* <ContactForm onAdd={addContact} /> */}
       {/* <SearchBox value={nameFilter} onChange={setNameFilter} /> */}
