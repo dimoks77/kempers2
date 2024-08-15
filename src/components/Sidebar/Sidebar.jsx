@@ -1,11 +1,12 @@
 import css from "./Sidebar.module.css";
-import locationIcon from '../../icons/location.svg';
+import Iconsvg from '../Icons/Icons';
 
 const Sidebar = () => {
   return (
     <form className={css.searchForm}>
       <div className={css.locationGroup}>
         <p className={css.label}>Location:</p>
+        <Iconsvg className={css.icons} iconName="icon-minus-round" />
         <input
           className={css.searchInput}
           type="text"
