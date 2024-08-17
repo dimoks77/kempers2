@@ -1,8 +1,8 @@
 import css from "./Car.module.css";
 import { useState } from "react";
 import Iconsvg from "../Icons/Icons";
-import img from "../../images/car1.jpg"
 import { useDispatch } from "react-redux";
+import TagList from '../TagList/TagList';
 
 const Car = ({ item }) => {
     const [showModal, setShowModal] = useState(false);
@@ -41,7 +41,7 @@ const Car = ({ item }) => {
             <div className={css.location}>Kyiv, Ukraine</div>
           </div>
           <div className={css.desc}>{item.description}</div>
-          <div className={css.tags}>
+          {/* <div className={css.tags}>
             <div className={css.tag}>
               <div className={css.tagIcon}>
                 <Iconsvg className={css.tagIcon} iconName="users" />
@@ -86,7 +86,9 @@ const Car = ({ item }) => {
                 {`${item?.details?.airConditioner || 'N/A'} AC`}
               </div>
             </div>
-          </div>
+          </div> */}
+
+          <TagList details={item.details} />
           <button type="submit" className={css.showMore}>
             Show More
           </button>
