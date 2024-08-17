@@ -1,13 +1,13 @@
 import Sidebar from "../../components/Sidebar/Sidebar";
 import Main from "../../components/Main/Main";
-// import css from "./HomePage.module.css";
+import css from "./Catalog.module.css";
 
 const Catalog = () => {
     return (
-        <>
+        <div className={css.container}>
             <Sidebar />
             <Main />
-        </>
+        </div>
     );
   };
   

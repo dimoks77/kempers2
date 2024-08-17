@@ -1,5 +1,6 @@
-import background from '/src/images/site.webp';
+import background from '/src/images/bg.webp';
 import css from "./HomePage.module.css";
+import { Link } from 'react-router-dom';
 
 const HomePage = () => {
     return (
@@ -7,7 +8,7 @@ const HomePage = () => {
             style={{
                 backgroundImage: `url(${background})`,
                 backgroundSize: 'cover',
-                backgroundPosition: 'center',
+                backgroundPosition: 'left',
                 backgroundRepeat: 'no-repeat',
                 width: '100vw',
                 height: '100vh',
@@ -16,12 +17,11 @@ const HomePage = () => {
                 justifyContent: 'center',
                 alignItems: 'center',
                 textAlign: 'center',
-                gap: '0px',
+                gap: '60px',
             }}
         >
-            <h1 className={css.h1}>Your home on wheels!</h1>
-            <h4 className={css.h4}>The best camper rental catalog!</h4>
-            <a href="/catalog" className={css.entryLink}>← Entry catlog</a>
+<h1 className={`${css.h1} ${css.fadeIn}`}>Your home on wheels!</h1>
+            <Link to="/catalog" className={`${css.entryLink} ${css.fadeIn}`}>← Entry</Link>
         </div>
     );
 };
