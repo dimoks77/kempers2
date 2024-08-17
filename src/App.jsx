@@ -3,6 +3,8 @@ import { useState, useEffect } from "react";
 // import ContactList from "./components/ContactList/ContactList";
 // import SearchBox from "./components/SearchBox/SearchBox";
 import Sidebar from "./components/Sidebar/Sidebar";
+import Main from "./components/Main/Main";
+// import css from "./App.css";
 
 // const initialContacts = [
 //   { id: "id-1", name: "Rosie Simpson", number: "459-12-56" },
@@ -40,13 +42,14 @@ export const App = () => {
   // );
 
   return (
-    <>
+    <div className="container">
       {/* <h1>test</h1> */}
       <Sidebar />
+      <Main />
       {/* <ContactForm onAdd={addContact} /> */}
       {/* <SearchBox value={nameFilter} onChange={setNameFilter} /> */}
       {/* <ContactList items={visibleContacts} onDelete={deleteContact} /> */}
-    </>
+    </div>
   );
 };
 

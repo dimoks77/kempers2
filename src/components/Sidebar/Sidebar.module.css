@@ -31,6 +31,7 @@
     flex-direction: column;
     width: 360px;
     height: 270px;
+    margin-bottom: 56px;
 }
 
 .type  {
@@ -38,6 +39,7 @@
     flex-direction: column;
     width: 360px;
     height: 167px;
+    margin-bottom: 64px;
 }
 
 .label{
@@ -49,6 +51,24 @@
     margin-bottom: 10px;
 }
 
+.title {
+    
+    font-family: var(--font-family);
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 24px;
+    text-align: left;
+    color: #101828;
+    margin-bottom: 14px;
+
+}
+
+.line {
+    border: 1px solid #101828;
+    width: 100%;
+    opacity: 0.1;
+    margin-bottom: 24px;
+}
 
 .searchInput {
     border-radius: 10px;
@@ -74,13 +94,21 @@
     width: 173px;
     height: 56px;
     cursor: pointer;
+    
+    gap: 10px;
+    color: white;
+    opacity: 0px;
+    background-color: #E44848;
+
 }
 
 .searchButton:hover {
-    background-color: #0056b3;
+    background-color: #D84343;
 }
 
-
+.searchButton:active {
+    background-color: #D84343;
+}
 
 .locationGroup {
     /* position: relative; */
@@ -120,3 +148,108 @@
     opacity: 100%;
   }
 
+  .filtersGroup {
+    display: grid;
+    width: 360px;
+    height: 198px;
+    gap: 10px;
+    grid-template-columns: repeat(3, 1fr); 
+    grid-template-rows: 95px 95px; 
+    
+  }
+  
+
+  
+
+  .filterItem {
+    /* position: relative; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 95px;
+    /* border: 1px solid #101828; 
+    
+    border-radius: 10px; */
+    transition: border-color 0.3s ease;
+    cursor: pointer;
+  }
+  
+  .checkbox {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+
+  }
+
+  .customCheckbox {
+    border: 1px solid rgba(16, 24, 40, 0.2);
+    border-radius: 10px;
+    width: 100%;
+    height: 95px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    font-size: 16px;
+    gap: 8px;
+  }
+  
+  .checkbox:checked + .customCheckbox {
+    border: 1px solid #E44848; 
+    border-radius: 10px;
+  }
+
+
+.iconsCheckbox {
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    stroke: #101828;
+    stroke-width: 1;
+}
+
+.iconsCheckboxType {
+    width: 40px;
+    height: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    stroke: #101828;
+    stroke-width: 1;
+}
+
+.typeGroup {
+    display: grid;
+    width: 360px;
+    height: 198px;
+    gap: 10px;
+    grid-template-columns: repeat(3, 1fr); 
+    grid-template-rows: 95px 95px; 
+}
+
+.typeItem {
+    
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: border-color 0.3s ease;
+    cursor: pointer;
+    
+  }
+
+  .customCheckbox p {
+    user-select: none;
+    margin: 0;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 20px;
+    white-space: normal;
+    word-wrap: break-word;
+    max-width: 90%;
+  }
