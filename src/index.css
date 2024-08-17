@@ -72,11 +72,11 @@ address {
   font-style: normal;
 }
 
-.container {
+/* .container {
   display: flex;
   flex-direction: row;
   gap: 64px; 
   padding: 100px 64px;
-}
+} */
 
 
