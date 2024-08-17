@@ -1,53 +1,96 @@
 import css from "./Car.module.css";
+import { useState } from "react";
 import Iconsvg from "../Icons/Icons";
 import img from "../../images/car1.jpg"
+import { useDispatch } from "react-redux";
 
-const Car = () => {
+const Car = ({ item }) => {
+    const [showModal, setShowModal] = useState(false);
+    const dispatch = useDispatch();
+  
+    const [isFavorite, setIsFavorite] = useState();
+  
+    const openModal = () => {
+      setShowModal(true);
+    };
+  
+    const closeModal = () => {
+      setShowModal(false);
+    };
+  
     return (
       <div className={css.card}>
-        <div className={css.cover}><img src={img} alt="Car" /></div>
+        <div className={css.cover}>
+          <img className={css.img} src={item.gallery[0]} alt="{item.name}" />
+        </div>
         
         <div className={css.info}>
-            <div className={css.titlePrice}>
-                    <div className={css.title}>Mavericks</div>
-                    <div className={css.priceIconWrapper}>
-                        <div className={css.price}>€8000.00</div>
-                        <div className={css.favorites}><Iconsvg className={css.favoritIcon} iconName="heart" /></div>
-                    </div>
+          <div className={css.titlePrice}>
+            <div className={css.title}>{item.name}</div>
+            <div className={css.priceIconWrapper}>
+              <div className={css.price}>€{item.price}.00</div>
+              <div className={css.favorites}>
+                <Iconsvg className={css.favoritIcon} iconName="heart" />
+              </div>
             </div>
-            <div className={css.ratingLocation}>
-                <Iconsvg className={css.starIcon} iconName="star" />    
-                <div className={css.rating}>4.4(2 Reviews)</div>
-                <Iconsvg className={css.locationIcon} iconName="location" />    
-                <div className={css.location}>Kyiv, Ukraine</div>
-            </div>
-            <div className={css.desc}>Embrace simplicity and freedom with the Mavericks panel truck, an ideal choice for solo travelers or couples seeking a compact and efficient way to explore the open roads.</div>
-            <div className={css.tags}>
+          </div>
+          <div className={css.ratingLocation}>
+            <Iconsvg className={css.starIcon} iconName="star" />
+            <div className={css.rating}>{item.rating} ({item.reviews.length} Reviews)</div>
+            <Iconsvg className={css.locationIcon} iconName="location" />
+            <div className={css.location}>Kyiv, Ukraine</div>
+          </div>
+          <div className={css.desc}>{item.description}</div>
+          <div className={css.tags}>
             <div className={css.tag}>
-                        <div className={css.tagIcon}><Iconsvg className={css.favoritIcon} iconName="users" /></div>
-                        <div className={css.tagText}>2 adults</div>
-                    </div>
-                    <div className={css.tag}>
-                        <div className={css.tagIcon}><Iconsvg className={css.favoritIcon} iconName="users" /></div>
-                        <div className={css.tagText}>2 adults</div>
-                    </div>
-                    <div className={css.tag}>
-                        <div className={css.tagIcon}><Iconsvg className={css.favoritIcon} iconName="users" /></div>
-                        <div className={css.tagText}>2 adults</div>
-                    </div>
-                    <div className={css.tag}>
-                        <div className={css.tagIcon}><Iconsvg className={css.favoritIcon} iconName="users" /></div>
-                        <div className={css.tagText}>2 adults</div>
-                    </div>                    
-                    <div className={css.tag}>
-                        <div className={css.tagIcon}><Iconsvg className={css.favoritIcon} iconName="users" /></div>
-                        <div className={css.tagText}>2 adults</div>
-                    </div>      
+              <div className={css.tagIcon}>
+                <Iconsvg className={css.tagIcon} iconName="users" />
+              </div>
+              <div className={css.tagText}>
+                {`${item?.adults || 'N/A'} adults`}
+              </div>
             </div>
-            <button type="submit" className={css.showMore}>Show More</button>
+            <div className={css.tag}>
+              <div className={css.tagIcon}>
+                <Iconsvg className={css.tagIcon} iconName="pd" />
+              </div>
+              <div className={css.tagText}>{item?.transmission || 'N/A'}</div>
+            </div>
+            <div className={css.tag}>
+              <div className={css.tagIcon}>
+                <Iconsvg className={css.tagIcon} iconName="petrol" />
+              </div>
+              <div className={css.tagText}>{item?.engine || 'N/A'}</div>
+            </div>
+            <div className={css.tag}>
+              <div className={css.tagIcon}>
+                <Iconsvg className={css.tagIcon} iconName="knife" />
+              </div>
+              <div className={css.tagText}>
+                {`${item?.details?.kitchen || 'N/A'} kitchen`}
+              </div>
+            </div>
+            <div className={css.tag}>
+              <div className={css.tagIcon}>
+                <Iconsvg className={css.tagIcon} iconName="bed" />
+              </div>
+              <div className={css.tagText}>
+                {`${item?.details?.beds || 'N/A'} beds`}
+              </div>
+            </div>
+            <div className={css.tag}>
+              <div className={css.tagIcon}>
+                <Iconsvg className={css.tagIcon} iconName="wind" />
+              </div>
+              <div className={css.tagText}>
+                {`${item?.details?.airConditioner || 'N/A'} AC`}
+              </div>
+            </div>
+          </div>
+          <button type="submit" className={css.showMore}>
+            Show More
+          </button>
         </div>
-            
-        
       </div>
     );
   };

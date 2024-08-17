@@ -1,7 +1,7 @@
-/* Общие стили для плавного появления */
+
 .fade-in {
     opacity: 0;
-    animation: fadeIn 2s forwards; /* Продолжительность анимации 2 секунды */
+    animation: fadeIn 2s forwards;
 }
 
 @keyframes fadeIn {
@@ -42,8 +42,6 @@
     padding: 10px 40px;
     border-radius: 10px;
     transition: background-color 0.3s ease;
-    /* margin-bottom: 200px; */
-    /* margin-top: 20px; */
     animation: fadeIn 0s forwards;
 }
 
