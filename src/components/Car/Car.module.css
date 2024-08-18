@@ -150,6 +150,7 @@
 }
 
 .showMore {
+  cursor: pointer;
   display: flex;
   width: 166px;
   height: 56px;
@@ -165,4 +166,21 @@
   line-height: 24px;
   letter-spacing: -0.005em;
   text-align: left;
+  border: none;
+  margin: 0;
+}
+
+.showMore:hover {
+  border: none;
+  background-color: #d84343;
+}
+
+.showMore:active {
+  border: none;
+  background-color: #d84343;
+}
+
+.showMore:focus {
+  border: none;
+  background-color: #d84343;
 }

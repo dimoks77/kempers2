@@ -1,0 +1,274 @@
+.modalOverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(17, 18, 19, 0.4);
+    z-index: 999;
+
+  }
+  
+  .modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 982px;
+    height: 720px;
+    background-color: white;
+    padding: 40px 16px 40px 40px;
+    border-radius: 20px;
+    z-index: 1000;
+    overflow: hidden;
+    margin: 0;
+    
+  }
+  
+  .modalContent {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    margin: 0;
+    padding: 0 16px 0 0;
+    height: 100%;
+    overflow-y: auto; 
+    overflow-x: hidden; 
+  }
+
+  .closeIcon {
+    cursor: pointer;
+    width: 26px;
+    height: 26px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 1001;
+  }
+
+  
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px;
+  }
+
+  .img {
+    width: 290px;
+    height: 310px;
+    object-fit: cover;
+    border-radius: 8px;
+
+  }
+
+  .gallery {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 10px;
+    width: 902px;
+    height: 310px;
+
+  }
+
+  
+  .info {
+    width: 526px;
+    height: 310px;
+  }
+  
+  .titlePrice {
+    display: flex;
+    width: 100%;
+    height: 30px;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px;
+  }
+  
+  .priceIconWrapper {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+  }
+  
+  .title {
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 30px;
+    color: #101828;
+    margin-bottom: 44px;
+  }
+  
+  .price {
+    color: #101828;
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 30px;
+    margin-bottom: 24px;
+  }
+  
+  .favoritIcon {
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .starIcon {
+    width: 16px;
+    height: 16px;
+    margin-right: 2px;
+  }
+  
+  .ratingLocation {
+    display: flex;
+    align-items: center;
+    height: 24px;
+    margin-bottom: 24px;
+  }
+  
+  .rating {
+    display: flex;
+    align-items: center;
+    margin-right: 16px;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    text-decoration: underline;
+  }
+  
+  .location {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+  }
+  
+  .locationIcon {
+    width: 16px;
+    height: 16px;
+    display: flex;
+    align-items: center;
+    margin-right: 4px;
+    stroke: #101828;
+  }
+  
+  .desc {
+    width: 902px;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    text-align: left;
+    color: rgba(71, 84, 103, 1);
+    margin-bottom: 24px;
+  }
+  
+  .ratingLocation {
+    margin-bottom: 16px;
+  }
+
+  .featuresReviews {
+    display: flex;
+    gap: 40px;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 24px;
+    text-align: left;
+    color: rgba(16, 24, 40, 1);
+    margin-bottom: 24px;
+  }
+
+  .line {
+    border: 1px solid #101828;
+    width: 100%;
+    opacity: 0.1;
+    margin-bottom: 24px;
+  }
+
+
+
+  .staticRightContent {
+    padding-left: 16px;
+    border-left: 1px solid #e0e0e0;
+  }
+  
+  .featuresReviews {
+    display: flex;
+    justify-content: flex-start; 
+    gap: 40px;
+    cursor: pointer;
+    position: relative;
+    margin-bottom: 24px;
+  }
+  
+  .featuresReviews p {
+    text-align: left;
+    font-size: 20px;
+    font-weight: 600;
+    color: #101828;
+    padding: 10px 0;
+    margin: 0;
+    position: relative;
+  }
+  
+  .activeTab::after {
+    content: "";
+    position: absolute;
+    bottom: -24px; 
+    left: 0;
+    width: 84px;
+    border-bottom: 5px solid rgba(228, 72, 72, 1);
+  }
+  
+  .tabContent {
+    margin-top: 16px;
+  }
+  
+  .featuresTab, .reviewsTab {
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  .modalContentWrapper {
+    position: relative;
+    height: 100%;
+    overflow: hidden; 
+  }
+  
+  .modalContent {
+    height: 100%;
+    overflow-y: scroll; 
+    padding-right: 8px; 
+  }
+    
+  .modalContent::-webkit-scrollbar {
+    width: 8px; 
+  }
+  
+  .modalContent::-webkit-scrollbar-thumb {
+    background-color: rgba(217, 217, 217, 1);
+    border-radius: 7px; 
+  }
+  
+  .modalContent::-webkit-scrollbar-thumb:hover {
+    background-color: rgba(200, 200, 200, 1); 
+  }
+  
+  .modalContent::-webkit-scrollbar-track {
+    background-color: transparent; 
+  }
+  

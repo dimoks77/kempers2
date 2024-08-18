@@ -1,0 +1,39 @@
+.modalForm {
+    width: 448px;
+    height: 532px;
+    padding: 24px;
+    display: flex;
+    gap: 24px;
+}
+
+.modalTextWrap {
+    display: flex;
+    gap: 8px;
+}
+
+
+
+
+
+.modalFormBtn {
+  border-radius: 200px;
+  padding: 16px 60px;
+  width: 173px;
+  height: 56px;
+  cursor: pointer;
+  gap: 10px;
+  color: white;
+  opacity: 0px;
+  background-color: #e44848;
+  border: none;
+}
+
+.modalFormBtn:hover {
+  border: none;
+  background-color: #d84343;
+}
+  
+.modalFormBtn:active {
+  border: none;
+  background-color: #d84343;
+}

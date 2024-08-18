@@ -61,21 +61,21 @@ const Sidebar = () => {
         <hr className={css.line} />
         <div className={css.typeGroup}>
           <label className={css.typeItem}>
-            <input type="checkbox" name="vehicle_type" value="Van" className={css.checkbox} />
+            <input type="radio" name="vehicle_type" value="Van" className={css.checkbox} />
             <div className={css.customCheckbox}>
               <Iconsvg className={css.iconsCheckboxType} iconName="cemperwd" />
               <p>Van</p>
             </div>
           </label>
           <label className={css.typeItem}>
-            <input type="checkbox" name="vehicle_type" value="Fully Integrated" className={css.checkbox} />
+            <input type="radio" name="vehicle_type" value="Fully Integrated" className={css.checkbox} />
             <div className={css.customCheckbox}>
               <Iconsvg className={css.iconsCheckboxType} iconName="cemperww" />
               <p>Fully Integrated</p>
             </div>
           </label>
           <label className={css.typeItem}>
-            <input type="checkbox" name="vehicle_type" value="Alcove" className={css.checkbox} />
+            <input type="radio" name="vehicle_type" value="Alcove" className={css.checkbox} />
             <div className={css.customCheckbox}>
               <Iconsvg className={css.iconsCheckboxType} iconName="cemper" />
               <p>Alcove</p>
