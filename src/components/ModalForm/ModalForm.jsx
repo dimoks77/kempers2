@@ -63,7 +63,7 @@ const ModalForm = () => {
             </div>
 
             <button type="submit" className={css.modalFormBtn}>
-              Submit
+              Send
             </button>
           </Form>
         )}
