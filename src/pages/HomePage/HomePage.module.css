@@ -22,6 +22,7 @@
     text-shadow: 5px 5px 8px rgba(0, 0, 0, 1);
     margin-top: -100px;
     animation: fadeIn 2s;
+    user-select: none;
 }
 
 .h4 {
@@ -32,6 +33,7 @@
     padding: 10px 50px;
     border-radius: 10px;
     animation: fadeIn 0s forwards;
+    user-select: none;
 }
 
 .entryLink {
