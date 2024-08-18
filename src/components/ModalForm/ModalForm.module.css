@@ -4,21 +4,21 @@
     padding: 24px;
     display: flex;
     gap: 24px;
+    flex-direction: column;
+    border: 1px solid rgba(16, 24, 40, 0.2);
+    border-radius: 10px;
 }
 
 .modalTextWrap {
     display: flex;
+    flex-direction: column;
     gap: 8px;
 }
-
-
-
-
 
 .modalFormBtn {
   border-radius: 200px;
   padding: 16px 60px;
-  width: 173px;
+  width: 160px;
   height: 56px;
   cursor: pointer;
   gap: 10px;
@@ -36,4 +36,80 @@
 .modalFormBtn:active {
   border: none;
   background-color: #d84343;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  
+  .formGroup {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .inputField,
+  .textareaField {
+    width: 400px;
+    background-color: rgba(247, 247, 247, 1);
+    border: none;
+    border-radius: 10px;
+    padding: 18px;
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 20px;
+    color: rgba(16, 24, 40, 0.6);
+    resize: none; 
+  }
+  
+  .inputField {
+    height: 56px;
+    padding: 18px 337px 18px 18px;
+  }
+  
+  .textareaField {
+    height: 114px;
+    padding: 18px 308px 76px 18px;
+  }
+  
+  .inputFieldWithIcon {
+    padding-right: 50px;
+  }
+  
+  .bookingDateWrapper {
+    position: relative;
+  }
+  
+  .icon {
+    position: absolute;
+    right: 18px; 
+    top: 50%; 
+    transform: translateY(-50%);
+    width: 24px;
+    height: 24px;
+  }
+  
+ .error {
+    color: red;
+    font-size: 14px;
+    margin-top: 4px;
+  }
+  
+.modalFormTitle {
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 24px;
+    text-align: left;
+    color: rgba(16, 24, 40, 1);
+}
+
+.modalFormDesc {
+    font-size: 16x;
+    font-weight: 400;
+    line-height: 24px;
+    text-align: left;
+    color: rgba(71, 84, 103, 1);
+
 }

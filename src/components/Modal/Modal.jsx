@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import css from "./Modal.module.css";
 import Iconsvg from "../Icons/Icons";
+import ModalForm from "../ModalForm/ModalForm";
 
 const Modal = ({ item, onClose }) => {
   const [activeTab, setActiveTab] = useState("features"); // Хранение активной вкладки
@@ -65,13 +66,19 @@ const Modal = ({ item, onClose }) => {
 
             <div className={css.tabContent}>
               {activeTab === "features" && (
+                <div className={css.tabs}>
                 <div className={css.featuresTab}>
-                  <p>features content</p>
+                      <p>features content</p>
+                    </div>
+                    <ModalForm />
                 </div>
               )}
               {activeTab === "reviews" && (
-                <div className={css.reviewsTab}>
-                  <p>reviews content</p>
+                <div className={css.tabs}>
+                    <div className={css.reviewsTab}>
+                      <p>reviews content</p>
+                    </div>
+                    <ModalForm />
                 </div>
               )}
             </div>
