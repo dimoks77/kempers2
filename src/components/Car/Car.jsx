@@ -88,7 +88,13 @@ const Car = ({ item }) => {
             </div>
           </div> */}
 
-          <TagList details={item.details} />
+<TagList 
+  details={item.details}
+  adults={item.adults}
+  engine={item.engine}
+  transmission={item.transmission}
+/>
+
           <button type="submit" className={css.showMore}>
             Show More
           </button>

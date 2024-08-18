@@ -20,7 +20,7 @@ const Sidebar = () => {
           <label className={css.filterItem}>
             <input type="checkbox" name="equipment" value="AC" className={css.checkbox} />
             <div className={css.customCheckbox}>
-              <Iconsvg className={css.iconsCheckbox} iconName="wind" />
+              <Iconsvg className={css.iconsCheckbox} iconName="AC" />
               <p>AC</p>
             </div>
           </label>
@@ -28,28 +28,28 @@ const Sidebar = () => {
           <label className={css.filterItem}>
             <input type="checkbox" name="equipment" value="Automatic" className={css.checkbox} />
             <div className={css.customCheckbox}>
-              <Iconsvg className={css.iconsCheckbox} iconName="pd" />
+              <Iconsvg className={css.iconsCheckbox} iconName="Automatic" />
               <p>Automatic</p>
             </div>
           </label>
           <label className={css.filterItem}>
             <input type="checkbox" name="equipment" value="Kitchen" className={css.checkbox} />
             <div className={css.customCheckbox}>
-              <Iconsvg className={css.iconsCheckbox} iconName="knife" />
+              <Iconsvg className={css.iconsCheckbox} iconName="Kitchen" />
               <p>Kitchen</p>
             </div>
           </label>
           <label className={css.filterItem}>
             <input type="checkbox" name="equipment" value="TV" className={css.checkbox} />
             <div className={css.customCheckbox}>
-              <Iconsvg className={css.iconsCheckbox} iconName="tv" />
+              <Iconsvg className={css.iconsCheckbox} iconName="TV" />
               <p>TV</p>
             </div>
           </label>
           <label className={css.filterItem}>
             <input type="checkbox" name="equipment" value="Shower/WC" className={css.checkbox} />
             <div className={css.customCheckbox}>
-              <Iconsvg className={css.iconsCheckbox} iconName="shower" />
+              <Iconsvg className={css.iconsCheckbox} iconName="Shower" />
               <p>Shower/WC</p>
             </div>
           </label>
